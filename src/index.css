@@ -1,0 +1,51 @@
+@import "tailwindcss";
+:root {
+  --yellow_color: #faca10;
+  --gray_color: #f6f6f6;
+  --black_color: #1e1e1e;
+  --whtie_color: #ffffff;
+  --ash_color: #c4c4c4;
+  --nunito: "Nunito", serif;
+}
+
+@theme {
+  --color-yellow_color: var(--yellow_color);
+  --color-gray_color: var(--gray_color);
+  --color-black_color: var(--black_color);
+  --color-whtie_color: var(--whtie_color);
+  --color-ash_color: var(--ash_color);
+  --font-nunito: var(--nunito);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navitemstyle {
+  position: relative;
+}
+.navitemstyle::after {
+  position: absolute;
+  content: "";
+  bottom: 7px;
+  z-index: -1;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  opacity: 0;
+  background-color: var(--yellow_color);
+  transition: all linear 0.5s;
+}
+
+.navitemstyle:hover::after {
+  width: 100%;
+  opacity: 0.7;
+}
+
+/* .bannerbg {
+  background-image: url(./assets/banner_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
