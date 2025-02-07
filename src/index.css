@@ -59,3 +59,32 @@
   background-color: var(--yellow_color);
   transition: all linear 0.5s;
 }
+.normalButton {
+  @apply px-5 py-2.5 rounded font-nunito font-bold text-lg text-whtie_color hover:bg-purple-400 hover:text-white cursor-pointer  transition bg-black;
+}
+.ourcustomBttonStyle {
+  @apply px-5 py-2.5 rounded font-nunito font-bold text-lg text-whtie_color hover:bg-yellow-400 hover:text-purple-400 cursor-pointer  transition bg-yellow-400 relative;
+}
+
+.ourcustomBttonStyle::after {
+  position: absolute;
+  content: "";
+  left: -69px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  @apply bg-yellow-400;
+}
+
+.ourcustomBttonStyle::before {
+  position: absolute;
+  content: "";
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 4px;
+  @apply bg-yellow-400;
+}
